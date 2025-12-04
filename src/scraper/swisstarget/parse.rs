@@ -3,10 +3,7 @@ use scraper::{Html, Selector};
 
 use crate::config::get_config;
 
-pub fn parse_and_save_csv(
-    html: &str,
-    output: &str
-)-> Result<(), Box<dyn std::error::Error>> {
+pub fn parse_and_save_csv(html: &str, output: &str) -> Result<(), Box<dyn std::error::Error>> {
     let cfg = &get_config().swisstarget.selector;
 
     let document = Html::parse_document(html);
@@ -15,7 +12,7 @@ pub fn parse_and_save_csv(
 
     let mut wtr = Writer::from_path(output)?;
 
-    wtr.write_record(&[
+    wtr.write_record([
         "Target",
         "Common Name",
         "Uniprot ID",

@@ -1,6 +1,6 @@
-pub mod  args;
+pub mod args;
 
-use  args::Cli;
+use args::Cli;
 use clap::Parser;
 
 use crate::scraper::swisstarget;
@@ -11,9 +11,10 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
     let rt = tokio::runtime::Runtime::new()?;
 
     rt.block_on(async {
-        swisstarget::run(&cli.smiles, &cli.output).await?;
+        swisstarget::run(cli.smiles, &cli.output).await?;
         Ok::<(), Box<dyn std::error::Error>>(())
     })?;
 
     Ok(())
 }
+

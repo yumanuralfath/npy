@@ -6,7 +6,7 @@ pub struct AppConfig {
 }
 
 #[derive(Debug, Deserialize)]
-pub  struct SwissTargetConfig {
+pub struct SwissTargetConfig {
     pub base_url: String,
     pub predict_endpoint: String,
     pub result_endpoint: String,
@@ -27,3 +27,4 @@ pub struct SwissSelectors {
     pub result_table: String,
     pub cell: String,
 }
+

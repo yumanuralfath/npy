@@ -1,6 +1,9 @@
-use std::{fs, path::{Path, PathBuf}};
+use std::{
+    fs,
+    path::{Path, PathBuf},
+};
 
-use crate::config::{models::AppConfig};
+use crate::config::models::AppConfig;
 
 pub fn load_config() -> Result<AppConfig, Box<dyn std::error::Error>> {
     dotenvy::dotenv().ok();
@@ -33,8 +36,10 @@ pub fn get_config_path() -> PathBuf {
         return dev_path;
     }
 
-    panic!("config.yaml tidak ditemukan di:\n  {}\n  {}", 
-        prod_path.display(), 
+    panic!(
+        "config.yaml tidak ditemukan di:\n  {}\n  {}",
+        prod_path.display(),
         dev_path.display()
     );
 }
+

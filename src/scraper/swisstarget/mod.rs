@@ -1,22 +1,32 @@
 pub mod client;
 pub mod job;
-pub mod poll;
 pub mod parse;
+pub mod poll;
 
-pub async fn run(
-    smiles: &str,
-    output: &str,
-)-> Result<(), Box<dyn std::error::Error>> {
-    let client =  client::build_client()?;
+pub async fn run(smiles: Vec<String>, output: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let client = client::build_client()?;
 
-    let job_id = job::submit_smiles(&client, smiles).await?;
-    println!("[SwissTarget] Job ID: {} ▄︻╦芫≡══-- ", job_id);
+    let target_folder = format!("{}/swiss_target_prediction", output);
+    std::fs::create_dir_all(&target_folder)?;
 
-    let html =  poll::fetch_result_html(&client, &job_id).await?;
+    for smile in smiles {
+        println!("[SwissTarget] Processing SMILES: {smile}");
 
-    parse::parse_and_save_csv(&html, output)?;
+        let job_id = job::submit_smiles(&client, &smile).await?;
+        println!("[SwissTarget] Job ID: {}", job_id);
 
-    println!("[SwissTarget] saved into: {} ✌︎㋡", output);
+        let html = poll::fetch_result_html(&client, &job_id).await?;
 
+        let csv_path = format!("{}/{}.csv", target_folder, safe_name(&smile));
+        parse::parse_and_save_csv(&html, &csv_path)?;
+
+        println!("[SwissTarget] Saved into: {}", csv_path);
+    }
     Ok(())
+}
+
+pub fn safe_name(name: &str) -> String {
+    name.chars()
+        .map(|c| if c.is_alphanumeric() { c } else { '_' })
+        .collect()
 }
