@@ -1,6 +1,6 @@
 use std::{fs, path::Path};
 
-use crate::config::{self, models::AppConfig};
+use crate::config::{models::AppConfig};
 
 pub fn load_config() -> Result<AppConfig, Box<dyn std::error::Error>> {
     dotenvy::dotenv().ok();

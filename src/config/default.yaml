@@ -5,9 +5,9 @@ swisstarget:
   result_endpoint: "/result.php"
 
   headers:
-    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
     origin: "https://www.swisstargetprediction.ch"
-    referer: "https://www.swisstargetprediction.ch"
+    referer: "https://www.swisstargetprediction.ch/"
 
   selector:
     result_table: "#resultTable tbody tr"
