@@ -10,7 +10,7 @@ Dibuat oleh **Yumana**.
 
 Download installer terbaru dari halaman **Releases**:
 
-👉 https://github.com/<USERNAME>/<REPO>/releases
+👉 https://github.com/yumanuralfath/npy/releases
 
 Installer akan memasang:
 
