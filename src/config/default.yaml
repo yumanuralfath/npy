@@ -1,0 +1,14 @@
+swisstarget:
+  base_url: "https://www.swisstargetprediction.ch"
+
+  predict_endpoint: "/predict.php"
+  result_endpoint: "/result.php"
+
+  headers:
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    origin: "https://www.swisstargetprediction.ch"
+    referer: "https://www.swisstargetprediction.ch"
+
+  selector:
+    result_table: "#resultTable tbody tr"
+    cell: "td"
