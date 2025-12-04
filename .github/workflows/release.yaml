@@ -1,0 +1,46 @@
+name: Build and Release Windows Installer
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Build NPY + Installer
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build Release Binary
+        run: cargo build --release
+
+      # Copy binary + config before packaging
+      - name: Prepare Dist Folder
+        run: |
+          mkdir dist
+          copy target\release\npy.exe dist\npy.exe
+          mkdir dist\config
+          copy distr\config\config.yaml dist\config\config.yaml
+          copy distr\npy_shell.bat dist\npy_shell.bat
+
+      - name: Install Inno Setup
+        run: |
+          choco install innosetup --yes
+
+      - name: Build Installer with Inno Setup
+        run: |
+          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+
+      - name: Upload Build Artifacts to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist\npy.exe
+            Output\setup_npy.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
