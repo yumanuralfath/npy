@@ -1,9 +1,9 @@
 pub mod args;
 
-use args::Cli;
-use clap::Parser;
 use crate::cli::args::Commands;
 use crate::scraper::swisstarget;
+use args::Cli;
+use clap::Parser;
 
 pub fn run() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
@@ -25,4 +25,3 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
-
