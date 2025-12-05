@@ -1,0 +1,204 @@
+Target,Common Name,Uniprot ID,ChEMBL ID,Target Class,Probability,Known Actives
+Matrix metalloproteinase 3,MMP3,P08254,CHEMBL283,Protease,0.112041901328,"10  / 
+ 0"
+Matrix metalloproteinase 9,MMP9,P14780,CHEMBL321,Protease,0.112041901328,"12  / 
+ 0"
+Matrix metalloproteinase 1,MMP1,P03956,CHEMBL332,Protease,0.112041901328,"16  / 
+ 0"
+ADAM17,ADAM17,P78536,CHEMBL3706,Protease,0.112041901328,"16  / 
+ 0"
+Phenylalanine-4-hydroxylase,PAH,P00439,CHEMBL3076,Oxidoreductase,0.112041901328,"1  / 
+ 0"
+Purine nucleoside phosphorylase,PNP,P00491,CHEMBL4338,Enzyme,0.112041901328,"59  / 
+ 0"
+Carbonic anhydrase II,CA2,P00918,CHEMBL205,Lyase,0.112041901328,"82  / 
+ 0"
+Carbonic anhydrase I,CA1,P00915,CHEMBL261,Lyase,0.112041901328,"83  / 
+ 0"
+Matrix metalloproteinase 13,MMP13,P45452,CHEMBL280,Protease,0.112041901328,"9  / 
+ 0"
+Matrix metalloproteinase 7,MMP7,P09237,CHEMBL4073,Protease,0.112041901328,"6  / 
+ 0"
+Matrix metalloproteinase 12,MMP12,P39900,CHEMBL4393,Protease,0.112041901328,"8  / 
+ 0"
+Matrix metalloproteinase 8,MMP8,P22894,CHEMBL4588,Protease,0.112041901328,"11  / 
+ 0"
+Carbonic anhydrase XII,CA12,O43570,CHEMBL3242,Lyase,0.112041901328,"55  / 
+ 0"
+Carbonic anhydrase IX,CA9,Q16790,CHEMBL3594,Lyase,0.112041901328,"59  / 
+ 0"
+Heat shock protein HSP 90-alpha,HSP90AA1,P07900,CHEMBL3880,Other cytosolic protein,0.112041901328,"1  / 
+ 0"
+Carbonic anhydrase XIV,CA14,Q9ULX7,CHEMBL3510,Lyase,0.112041901328,"16  / 
+ 0"
+Arachidonate 5-lipoxygenase,ALOX5,P09917,CHEMBL215,Oxidoreductase,0.112041901328,"3  / 
+ 0"
+Tyrosinase,TYR,P14679,CHEMBL1973,Oxidoreductase,0.112041901328,"7  / 
+ 0"
+Mitogen-activated protein kinase kinase kinase 7,MAP3K7,O43318,CHEMBL5776,Kinase,0.112041901328,"9  / 
+ 0"
+Beta-secretase 1,BACE1,P56817,CHEMBL4822,Protease,0.112041901328,"4  / 
+ 0"
+Sodium/glucose cotransporter 1,SLC5A1,P13866,CHEMBL4979,Electrochemical transporter,0.112041901328,"74  / 
+ 0"
+Adenosylhomocysteinase 2,AHCYL1,O43865,CHEMBL3751646,Enzyme,0.112041901328,"3  / 
+ 0"
+Stem cell growth factor receptor,KIT,P10721,CHEMBL1936,Kinase,0.112041901328,"5  / 
+ 0"
+Tyrosine-protein kinase SRC,SRC,P12931,CHEMBL267,Kinase,0.112041901328,"9  / 
+ 0"
+Vascular endothelial growth factor receptor 2,KDR,P35968,CHEMBL279,Kinase,0.112041901328,"6  / 
+ 0"
+Fibroblast growth factor receptor 1,FGFR1,P11362,CHEMBL3650,Kinase,0.112041901328,"3  / 
+ 0"
+Hepatocyte growth factor receptor,MET,P08581,CHEMBL3717,Kinase,0.112041901328,"5  / 
+ 0"
+Alpha-L-fucosidase I,FUCA1,P04066,CHEMBL4176,Enzyme,0.112041901328,"20  / 
+ 0"
+"Adenosine A1 receptor 
+  (by homology)",ADORA1,P30542,CHEMBL226,Family A G protein-coupled receptor,0.112041901328,"290  / 
+ 0"
+"Adenosine A2a receptor 
+  (by homology)",ADORA2A,P29274,CHEMBL251,Family A G protein-coupled receptor,0.112041901328,"227  / 
+ 0"
+Adenosine A3 receptor,ADORA3,P0DMS8,CHEMBL256,Family A G protein-coupled receptor,0.112041901328,"182  / 
+ 0"
+Adenosine kinase,ADK,P55263,CHEMBL3589,Enzyme,0.112041901328,"58  / 
+ 0"
+Low affinity sodium-glucose cotransporter,SLC5A4,Q9NY91,CHEMBL1770047,Electrochemical transporter,0.112041901328,"10  / 
+ 0"
+Sodium/glucose cotransporter 2,SLC5A2,P31639,CHEMBL3884,Electrochemical transporter,0.112041901328,"160  / 
+ 0"
+Estrogen receptor beta,ESR2,Q92731,CHEMBL242,Nuclear receptor,0.112041901328,"8  / 
+ 0"
+Caspase-3,CASP3,P42574,CHEMBL2334,Protease,0.112041901328,"23  / 
+ 0"
+Adenosine deaminase,ADA,P00813,CHEMBL1910,Hydrolase,0.0,"7  / 
+ 0"
+Endothelin receptor ET-A,EDNRA,P25101,CHEMBL252,Family A G protein-coupled receptor,0.0,"38  / 
+ 0"
+Adenosylhomocysteinase,AHCY,P23526,CHEMBL2664,Enzyme,0.0,"92  / 
+ 0"
+"Nitric-oxide synthase, brain",NOS1,P29475,CHEMBL3568,Enzyme,0.0,"2  / 
+ 0"
+Endothelin receptor ET-B,EDNRB,P24530,CHEMBL1785,Family A G protein-coupled receptor,0.0,"16  / 
+ 0"
+Interleukin-1 receptor-associated kinase 4,IRAK4,Q9NWZ3,CHEMBL3778,Kinase,0.0,"20  / 
+ 0"
+D-amino-acid oxidase,DAO,P14920,CHEMBL5485,Enzyme,0.0,"5  / 
+ 0"
+Carbonic anhydrase VII,CA7,P43166,CHEMBL2326,Lyase,0.0,"11  / 
+ 0"
+Carbonic anhydrase III,CA3,P07451,CHEMBL2885,Lyase,0.0,"2  / 
+ 0"
+Carbonic anhydrase VI,CA6,P23280,CHEMBL3025,Lyase,0.0,"4  / 
+ 0"
+Carbonic anhydrase IV,CA4,P22748,CHEMBL3729,Lyase,0.0,"9  / 
+ 0"
+Carbonic anhydrase VB,CA5B,Q9Y2D0,CHEMBL3969,Lyase,0.0,"3  / 
+ 0"
+Carbonic anhydrase VA,CA5A,P35218,CHEMBL4789,Lyase,0.0,"7  / 
+ 0"
+Cyclooxygenase-1,PTGS1,P23219,CHEMBL221,Oxidoreductase,0.0,"3  / 
+ 0"
+Mannose-6-phosphate isomerase,MPI,P34949,CHEMBL2758,Isomerase,0.0,"1  / 
+ 0"
+Hypoxanthine-guanine phosphoribosyltransferase,HPRT1,P00492,CHEMBL2360,Enzyme,0.0,"24  / 
+ 0"
+Glycine receptor subunit alpha-1,GLRA1,P23415,CHEMBL5845,Ligand-gated ion channel,0.0,"6  / 
+ 0"
+Glycine receptor subunit alpha-2,GLRA2,P23416,CHEMBL5871,Ligand-gated ion channel,0.0,"5  / 
+ 0"
+Epoxide hydratase,EPHX2,P34913,CHEMBL2409,Protease,0.0,"1  / 
+ 0"
+Lysosomal alpha-glucosidase,GAA,P10253,CHEMBL2608,Hydrolase,0.0,"3  / 
+ 0"
+Equilibrative nucleoside transporter 1,SLC29A1,Q99808,CHEMBL1997,Electrochemical transporter,0.0,"51  / 
+ 0"
+Adenosine A2b receptor,ADORA2B,P29275,CHEMBL255,Family A G protein-coupled receptor,0.0,"15  / 
+ 0"
+Heat shock cognate 71 kDa protein,HSPA8,P11142,CHEMBL1275223,Other cytosolic protein,0.0,"10  / 
+ 0"
+Bifunctional protein NCOAT,OGA,O60502,CHEMBL5921,Enzyme,0.0,"27  / 
+ 0"
+Glutathione S-transferase Pi,GSTP1,P09211,CHEMBL3902,Enzyme,0.0,"2  / 
+ 0"
+Glutathione S-transferase Mu 2,GSTM2,P28161,CHEMBL4589,Enzyme,0.0,"2  / 
+ 0"
+78 kDa glucose-regulated protein,HSPA5,P11021,CHEMBL1781865,Unclassified protein,0.0,"6  / 
+ 0"
+Nuclear factor NF-kappa-B p65 subunit,RELA,Q04206,CHEMBL5533,Transcription factor,0.0,"2  / 
+ 0"
+Sodium/nucleoside cotransporter 2,SLC28A2,O43868,CHEMBL5780,Electrochemical transporter,0.0,"5  / 
+ 0"
+"Thymidine kinase, cytosolic",TK1,P04183,CHEMBL2883,Transferase,0.0,"9  / 
+ 0"
+Aldo-keto-reductase family 1 member C3,AKR1C3,P42330,CHEMBL4681,Enzyme,0.0,"7  / 
+ 0"
+Transforming protein p21/H-Ras-1,HRAS,P01112,CHEMBL2167,Other cytosolic protein,0.0,"2  / 
+ 0"
+Dual specificity mitogen-activated protein kinase kinase 1,MAP2K1,Q02750,CHEMBL3587,Kinase,0.0,"55  / 
+ 0"
+Matrix metalloproteinase 2,MMP2,P08253,CHEMBL333,Protease,0.0,"6  / 
+ 0"
+Threonyl-tRNA synthetase,TARS,P26639,CHEMBL3391,Enzyme,0.0,"12  / 
+ 0"
+Vascular endothelial growth factor receptor 1,FLT1,P17948,CHEMBL1868,Kinase,0.0,"2  / 
+ 0"
+Platelet-derived growth factor receptor beta,PDGFRB,P09619,CHEMBL1913,Kinase,0.0,"2  / 
+ 0"
+Vascular endothelial growth factor receptor 3,FLT4,P35916,CHEMBL1955,Kinase,0.0,"1  / 
+ 0"
+Tyrosine-protein kinase receptor FLT3,FLT3,P36888,CHEMBL1974,Kinase,0.0,"3  / 
+ 0"
+Platelet-derived growth factor receptor alpha,PDGFRA,P16234,CHEMBL2007,Kinase,0.0,"1  / 
+ 0"
+Glycogen synthase kinase-3 alpha,GSK3A,P49840,CHEMBL2850,Kinase,0.0,"1  / 
+ 0"
+MAP kinase ERK1,MAPK3,P27361,CHEMBL3385,Kinase,0.0,"1  / 
+ 0"
+MAP kinase ERK2,MAPK1,P28482,CHEMBL4040,Kinase,0.0,"8  / 
+ 0"
+Beta-glucocerebrosidase,GBA,P04062,CHEMBL2179,Enzyme,0.0,"10  / 
+ 0"
+Cyclin-dependent kinase 1,CDK1,P06493,CHEMBL308,Kinase,0.0,"5  / 
+ 0"
+Dual specificity mitogen-activated protein kinase kinase 7,MAP2K7,O14733,CHEMBL3530,Kinase,0.0,"2  / 
+ 0"
+Protein kinase C epsilon,PRKCE,Q02156,CHEMBL3582,Kinase,0.0,"2  / 
+ 0"
+PI3-kinase p110-gamma subunit,PIK3CG,P48736,CHEMBL3267,Enzyme,0.0,"11  / 
+ 0"
+Caspase-6,CASP6,P55212,CHEMBL3308,Protease,0.0,"2  / 
+ 0"
+Caspase-7,CASP7,P55210,CHEMBL3468,Protease,0.0,"6  / 
+ 0"
+PI3-kinase p110-alpha subunit,PIK3CA,P42336,CHEMBL4005,Enzyme,0.0,"10  / 
+ 0"
+Caspase-2,CASP2,P42575,CHEMBL4884,Protease,0.0,"2  / 
+ 0"
+Glucocorticoid receptor,NR3C1,P04150,CHEMBL2034,Nuclear receptor,0.0,"2  / 
+ 0"
+Estrogen receptor alpha,ESR1,P03372,CHEMBL206,Nuclear receptor,0.0,"3  / 
+ 0"
+Protein-tyrosine phosphatase 1B,PTPN1,P18031,CHEMBL335,Phosphatase,0.0,"12  / 
+ 0"
+Casein kinase II alpha,CSNK2A1,P68400,CHEMBL3629,Kinase,0.0,"2  / 
+ 0"
+MAP kinase signal-integrating kinase 2,MKNK2,Q9HBH9,CHEMBL4204,Kinase,0.0,"3  / 
+ 0"
+Epidermal growth factor receptor erbB1,EGFR,P00533,CHEMBL203,Kinase,0.0,"11  / 
+ 0"
+"Nitric oxide synthase, inducible",NOS2,P35228,CHEMBL4481,Enzyme,0.0,"1  / 
+ 0"
+"Nitric-oxide synthase, endothelial",NOS3,P29474,CHEMBL4803,Enzyme,0.0,"1  / 
+ 0"
+Uridine phosphorylase 1,UPP1,Q16831,CHEMBL4811,Enzyme,0.0,"2  / 
+ 0"
+"Androgen Receptor 
+  (by homology)",AR,P10275,CHEMBL1871,Nuclear receptor,0.0,"5  / 
+ 0"
+Hexokinase type II,HK2,P52789,CHEMBL2640,Enzyme,0.0,"5  / 
+ 0"
+Hexokinase type I,HK1,P19367,CHEMBL2688,Enzyme,0.0,"3  / 
+ 0"

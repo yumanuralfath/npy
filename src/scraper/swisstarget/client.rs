@@ -1,4 +1,4 @@
-use reqwest::header::{HeaderMap, HeaderValue};
+use reqwest::header::{HeaderMap, HeaderValue, USER_AGENT};
 
 use crate::config::get_config;
 
@@ -7,7 +7,7 @@ pub fn build_client() -> Result<reqwest::Client, Box<dyn std::error::Error>> {
 
     let mut headers = HeaderMap::new();
     headers.insert(
-        "User_Agent",
+        USER_AGENT,
         HeaderValue::from_str(&cfg.headers.user_agent)?,
     );
     headers.insert("Origin", HeaderValue::from_str(&cfg.headers.origin)?);

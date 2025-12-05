@@ -20,7 +20,7 @@ pub async fn submit_smiles(
 
     let res = client.post(&url).form(&params).send().await?;
     let html = res.text().await?;
-    // println!("html: {html}");
+    println!("html: {html}");
 
     let re = Regex::new(r#"result\.php\?job=([0-9]+)&organism=Homo_sapiens"#)?;
     let caps = re.captures(&html).ok_or(
