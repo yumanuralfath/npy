@@ -2,7 +2,7 @@ pub mod args;
 
 use args::Cli;
 use clap::Parser;
-
+use crate::cli::args::Commands;
 use crate::scraper::swisstarget;
 
 pub fn run() -> Result<(), Box<dyn std::error::Error>> {
@@ -11,7 +11,15 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
     let rt = tokio::runtime::Runtime::new()?;
 
     rt.block_on(async {
-        swisstarget::run(cli.smiles, &cli.output).await?;
+        match cli.command {
+            Some(Commands::Swisstarget { smiles, output }) => {
+                swisstarget::run(smiles, &output).await?;
+            }
+            None => {
+                println!("No command provided. Use --help for usage.");
+            }
+        }
+
         Ok::<(), Box<dyn std::error::Error>>(())
     })?;
 
