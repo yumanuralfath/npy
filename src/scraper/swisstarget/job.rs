@@ -21,14 +21,14 @@ pub async fn submit_smiles(
 
     let res = client.post(&url).form(&params).send().await?;
     let html = res.text().await?;
-    
+
     if Cli::parse().verbose {
         println!("html: {html}");
     }
 
     let re = Regex::new(r#"result\.php\?job=([0-9]+)&organism=Homo_sapiens"#)?;
     let caps = re.captures(&html).ok_or(
-        "Job ID not Found, Server Error, please check smiles or test at website swisstarget",
+        "Job ID not Found, Server Error or Open swisstarget at website for first time only, please check smiles or test at website swisstarget",
     )?;
 
     Ok(caps.get(1).unwrap().as_str().to_string())

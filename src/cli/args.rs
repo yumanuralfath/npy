@@ -21,14 +21,32 @@ pub enum Commands {
         about = "Target prediction with SwissTargetPrediction",
         after_help = "EXAMPLES:\n\
                     npy swisstarget -s \"CCO\" -o hasil\n\
-                    npy swisstarget --smiles \"CCN(CC)CC\" --output prediksi\n\
-            npy swisstarget -s \"cco,ccn\" #for multi smiles"
+                    npy swisstarget --smiles \"CCN(CC)CC\" --output hasil\n\
+            npy swisstarget -s \"cco,ccn\" -o hasil   #for multi smiles"
     )]
     Swisstarget {
         #[arg(short, long, value_delimiter = ',', help = "SMILES string for analyze")]
         smiles: Vec<String>,
 
-        #[arg(short, long, default_value = "output")]
+        #[arg(short, long, default_value = "output", help = "Output file location")]
+        output: String,
+    },
+    #[command(about = "Make csv data from swisstarget csv")]
+    Data {
+        #[arg(
+            short,
+            long,
+            help = "location csv file from swisstarfet prediction",
+            default_value = "output/swiss_target_prediction"
+        )]
+        location: String,
+
+        #[arg(
+            short,
+            long,
+            help = "location output file",
+            default_value = "output/data"
+        )]
         output: String,
     },
 }
