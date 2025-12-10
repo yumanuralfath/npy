@@ -4,6 +4,7 @@ use std::{fs::OpenOptions, io::Write};
 use crate::cli::args::Cli;
 
 pub mod data;
+pub mod init;
 pub mod panther;
 pub mod pantherold;
 pub mod runall;

@@ -16,6 +16,10 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     rt.block_on(async {
         match cli.command {
+            Some(Commands::Init) => {
+                let _ = tool::init::init_default_files();
+            }
+
             Some(Commands::Swisstarget { smiles, output }) => {
                 swisstarget::run(smiles, &output).await?;
             }

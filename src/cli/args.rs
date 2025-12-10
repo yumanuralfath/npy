@@ -17,6 +17,9 @@ pub struct Cli {
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
+    #[command(about = "init folder genecard and smiles csv folder")]
+    Init,
+
     #[command(
         about = "Target prediction with SwissTargetPrediction",
         after_help = "EXAMPLES:\n\
