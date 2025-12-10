@@ -31,6 +31,16 @@ pub fn verbose<T: std::fmt::Debug>(value: T) {
     write_verbose_log(&msg);
 }
 
+pub fn verbose_with_name<T: std::fmt::Debug>(name: &str, value: T) {
+    let msg = format!("[VERBOSE] {}: {:?}", name, value);
+
+    if Cli::parse().verbose {
+        println!("{}", msg);
+    }
+
+    write_verbose_log(&msg);
+}
+
 pub fn write_debug(path: &str, content: &str) -> std::io::Result<()> {
     let mut file = OpenOptions::new()
         .create(true)
