@@ -7,6 +7,7 @@ use crate::cli::args::Cli;
 pub mod data;
 pub mod panther;
 pub mod pantherold;
+pub mod venny;
 
 pub fn verbose<T: std::fmt::Debug>(value: T) {
     if Cli::parse().verbose {

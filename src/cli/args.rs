@@ -89,4 +89,29 @@ pub enum Commands {
         )]
         output: String,
     },
+    #[command(about = "Venny analyst to see overlaps and differences in a venn diagram")]
+    Venny {
+        #[arg(
+            short,
+            long,
+            help = "genecard csv file path",
+            default_value = "output/Genecards/Genecards.csv"
+        )]
+        genecards: String,
+
+        #[arg(
+            short,
+            long,
+            help = "unique_genes csv file path",
+            default_value = "output/data/unique_genes.csv"
+        )]
+        unique_genes: String,
+
+        #[arg(
+            long,
+            help = "output Result data",
+            default_value = "output/data/venny.csv"
+        )]
+        output: String,
+    },
 }

@@ -2,8 +2,8 @@ pub mod args;
 
 use crate::cli::args::Commands;
 use crate::scraper::swisstarget;
-use crate::tool;
 use crate::tool::panther::run_panther_analysis;
+use crate::tool::{self, venny};
 use args::Cli;
 use clap::Parser;
 
@@ -17,12 +17,15 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
             Some(Commands::Swisstarget { smiles, output }) => {
                 swisstarget::run(smiles, &output).await?;
             }
+
             Some(Commands::Data { location, output }) => {
                 let _ = tool::data::make_csv_from_swisstarget(&location, &output);
             }
+
             Some(Commands::Panther { csv_path, output }) => {
                 run_panther_analysis(&csv_path, &output).await?;
             }
+
             Some(Commands::Pantherold {
                 genes,
                 organism,
@@ -31,6 +34,14 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
             }) => {
                 tool::pantherold::panther_protein_class_to_txt(genes, &organism, &output, file)
                     .await?;
+            }
+
+            Some(Commands::Venny {
+                genecards,
+                unique_genes,
+                output,
+            }) => {
+                venny::compare_genecards_and_list(&genecards, &unique_genes, &output);
             }
 
             None => {
