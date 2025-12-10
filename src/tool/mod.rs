@@ -7,6 +7,7 @@ use crate::cli::args::Cli;
 pub mod data;
 pub mod panther;
 pub mod pantherold;
+pub mod runall;
 pub mod string;
 pub mod venny;
 

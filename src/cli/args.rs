@@ -145,4 +145,26 @@ pub enum Commands {
         )]
         output: String,
     },
+
+    #[command(
+        about = "Run all pipeline at first",
+        after_help = "EXAMPLES:\n\
+                    npy run -s smiles.csv --genecards output/Genecards/Genecards.csv"
+    )]
+    Run {
+        #[arg(
+            short,
+            long,
+            help = "CSV containing SMILES",
+            default_value = "output/smiles/smiles.csv"
+        )]
+        smiles_csv: String,
+
+        #[arg(
+            long,
+            help = "Genecard CSV file path",
+            default_value = "output/Genecards/Genecards.csv"
+        )]
+        genecards: String,
+    },
 }

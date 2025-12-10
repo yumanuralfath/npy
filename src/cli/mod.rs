@@ -3,6 +3,7 @@ pub mod args;
 use crate::cli::args::Commands;
 use crate::scraper::swisstarget;
 use crate::tool::panther::run_panther_analysis;
+use crate::tool::runall::run_all_pipeline;
 use crate::tool::string::handle_string_command;
 use crate::tool::{self, venny};
 use args::Cli;
@@ -44,6 +45,7 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
             }) => {
                 venny::compare_genecards_and_list(&genecards, &unique_genes, &output);
             }
+
             Some(Commands::String {
                 csv,
                 species,
@@ -51,6 +53,16 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
             }) => {
                 if let Err(e) = handle_string_command(&csv, species, &output).await {
                     eprintln!("Error: {}", e);
+                    std::process::exit(1);
+                }
+            }
+
+            Some(Commands::Run {
+                smiles_csv,
+                genecards,
+            }) => {
+                if let Err(e) = run_all_pipeline(&smiles_csv, &genecards).await {
+                    eprintln!("Error in pipeline: {}", e);
                     std::process::exit(1);
                 }
             }
