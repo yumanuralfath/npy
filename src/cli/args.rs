@@ -114,4 +114,35 @@ pub enum Commands {
         )]
         output: String,
     },
+
+    #[command(
+        about = "Protein-protein interaction analysis with STRING database",
+        after_help = "EXAMPLES:\n\
+                    npy string -c proteins.csv -s 9606\n\
+                    npy string --csv proteins.csv --species 9606 --output hasil\n\
+                    npy string -c genes.csv -s 10090  #for mouse"
+    )]
+    String {
+        #[arg(
+            short,
+            long,
+            help = "CSV file with protein IDs in column A (no header)",
+            default_value = "output/data/venny.csv"
+        )]
+        csv: String,
+        #[arg(
+            short,
+            long,
+            help = "Species NCBI taxonomy ID (9606=Human, 10090=Mouse)",
+            default_value = "9606"
+        )]
+        species: u32,
+        #[arg(
+            short,
+            long,
+            help = "Output directory for results",
+            default_value = "output/string"
+        )]
+        output: String,
+    },
 }
