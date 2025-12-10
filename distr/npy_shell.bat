@@ -40,10 +40,10 @@ echo.
 :: Jika Windows Terminal tersedia → gunakan itu
 where wt.exe >nul 2>&1
 if %errorlevel%==0 (
-    wt.exe -w 0 nt -d "%EXE_FOLDER%" powershell -NoExit -Command "& ".\npy.exe --help" %*"
+    wt.exe -w 0 nt -d "%EXE_FOLDER%" powershell -NoExit -Command "& ".\npy.exe repl" %*"
     exit /b 0
 )
 
 :: FALLBACK → pakai PowerShell biasa
 powershell -NoExit -ExecutionPolicy Bypass ^
-  -Command "Set-Location '%EXE_FOLDER%'; chcp 65001 >$null; & ".\npy.exe --help" %*"
+  -Command "Set-Location '%EXE_FOLDER%'; chcp 65001 >$null; & ".\npy.exe repl" %*"
