@@ -1,6 +1,5 @@
-use std::{fs::File, io::Write};
-
 use clap::Parser;
+use std::{fs::OpenOptions, io::Write};
 
 use crate::cli::args::Cli;
 
@@ -11,15 +10,41 @@ pub mod runall;
 pub mod string;
 pub mod venny;
 
-pub fn verbose<T: std::fmt::Debug>(value: T) {
-    if Cli::parse().verbose {
-        println!("[VERBOSE] {:?}", value);
+fn write_verbose_log(msg: &str) {
+    if let Ok(mut file) = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open("verbose.log")
+    {
+        let _ = writeln!(file, "{}", msg);
     }
 }
 
+pub fn verbose<T: std::fmt::Debug>(value: T) {
+    let msg = format!("[VERBOSE] {:?}", value);
+
+    if Cli::parse().verbose {
+        println!("{}", msg);
+    }
+
+    write_verbose_log(&msg);
+}
+
 pub fn write_debug(path: &str, content: &str) -> std::io::Result<()> {
-    let mut file = File::create(path)?;
+    let mut file = OpenOptions::new()
+        .create(true)
+        .write(true)
+        .truncate(true)
+        .open(path)?;
+
     file.write_all(content.as_bytes())?;
-    println!("[VERBOSE]  File save {path}");
+    let msg = format!("[DEBUG FILE] Saved {path}");
+
+    if Cli::parse().verbose {
+        println!("{}", msg);
+    }
+
+    write_verbose_log(&msg);
+
     Ok(())
 }
