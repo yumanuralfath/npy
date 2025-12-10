@@ -1,8 +1,7 @@
-use clap::Parser;
 use regex::Regex;
 use reqwest::Client;
 
-use crate::{cli::args::Cli, config::get_config};
+use crate::{config::get_config, tool::verbose};
 
 pub async fn submit_smiles(
     client: &Client,
@@ -21,10 +20,7 @@ pub async fn submit_smiles(
 
     let res = client.post(&url).form(&params).send().await?;
     let html = res.text().await?;
-
-    if Cli::parse().verbose {
-        println!("html: {html}");
-    }
+    verbose(&html);
 
     let re = Regex::new(r#"result\.php\?job=([0-9]+)&organism=Homo_sapiens"#)?;
     let caps = re.captures(&html).ok_or(

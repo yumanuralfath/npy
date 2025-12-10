@@ -27,4 +27,3 @@ pub struct SwissSelectors {
     pub result_table: String,
     pub cell: String,
 }
-

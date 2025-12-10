@@ -49,4 +49,44 @@ pub enum Commands {
         )]
         output: String,
     },
+    #[command(about = "[DEPERECATED] Gene list analyze with pantherdb do not use this")]
+    Pantherold {
+        #[arg(
+            short,
+            long,
+            help = "file with have unique gene",
+            default_value = "output/data/unique_genes.csv"
+        )]
+        file: Option<String>,
+
+        #[arg(short, long, help = "id unique gene")]
+        genes: Option<Vec<String>>,
+
+        #[arg(
+            long,
+            help = "select organism default homo sapiens",
+            default_value = "9606"
+        )]
+        organism: String,
+
+        #[arg(long, help = "output data", default_value = "output/data/panther.txt")]
+        output: String,
+    },
+    #[command(about = "Gene list analyze with pantherdb")]
+    Panther {
+        #[arg(
+            short,
+            long,
+            help = "csv file with have unique gene",
+            default_value = "output/data/unique_genes.csv"
+        )]
+        csv_path: String,
+
+        #[arg(
+            long,
+            help = "output Result data",
+            default_value = "output/data/pantherdb_result.txt"
+        )]
+        output: String,
+    },
 }
