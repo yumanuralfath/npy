@@ -20,6 +20,9 @@ pub enum Commands {
     #[command(about = "init folder genecard and smiles csv folder")]
     Init,
 
+    #[command(about = "REPL mode for noob")]
+    Repl,
+
     #[command(
         about = "Target prediction with SwissTargetPrediction",
         after_help = "EXAMPLES:\n\

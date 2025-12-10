@@ -7,6 +7,7 @@ pub mod data;
 pub mod init;
 pub mod panther;
 pub mod pantherold;
+pub mod repl;
 pub mod runall;
 pub mod string;
 pub mod venny;

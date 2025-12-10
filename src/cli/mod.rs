@@ -20,6 +20,10 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
                 let _ = tool::init::init_default_files();
             }
 
+            Some(Commands::Repl) => {
+                tool::repl::start_repl().await?;
+            }
+
             Some(Commands::Swisstarget { smiles, output }) => {
                 swisstarget::run(smiles, &output).await?;
             }
